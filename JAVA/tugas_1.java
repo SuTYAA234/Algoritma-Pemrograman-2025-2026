@@ -1,4 +1,4 @@
-public class tipe_data {
+public class tugas_1 {
     public static void main(String[] args) {
         String nama = "Muhammad Rivan Surya";
         int umur = 21;
