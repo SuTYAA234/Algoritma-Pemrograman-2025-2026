@@ -1,7 +1,8 @@
 # include <stdio.h>  
 # include <conio.h> 
- 
-main() 
+using namespace std;
+
+int main() 
 { 
 char nm1[50];  
 char nm2[50]; 
