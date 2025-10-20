@@ -38,7 +38,6 @@ main()
     cout << (g != h); 
     cout << endl;
 
-    system("pause");
     return 0;
 
 }
