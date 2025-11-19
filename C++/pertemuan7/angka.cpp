@@ -17,5 +17,6 @@ int main(){
 
     cout<<"Apakah keduanya sama?"<<(a==b);
 
+    system("pause");
     return 0;
 }

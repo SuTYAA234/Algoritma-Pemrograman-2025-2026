@@ -2,6 +2,76 @@
     "version": "0.2.0",
     "configurations": [
         {
+            "type": "java",
+            "name": "IntegerExample",
+            "request": "launch",
+            "mainClass": "IntegerExample",
+            "projectName": "Algoritma-Pemrograman-2025-2026_d99216ee"
+        },
+        {
+            "type": "java",
+            "name": "tugas_2",
+            "request": "launch",
+            "mainClass": "tugas_2",
+            "projectName": "Algoritma-Pemrograman-2025-2026_d99216ee"
+        },
+        {
+            "type": "java",
+            "name": "Text",
+            "request": "launch",
+            "mainClass": "Text",
+            "projectName": "Algoritma-Pemrograman-2025-2026_d99216ee"
+        },
+        {
+            "type": "java",
+            "name": "Char",
+            "request": "launch",
+            "mainClass": "Char",
+            "projectName": "Algoritma-Pemrograman-2025-2026_d99216ee"
+        },
+        {
+            "type": "java",
+            "name": "GlobalVariable",
+            "request": "launch",
+            "mainClass": "GlobalVariable",
+            "projectName": "Algoritma-Pemrograman-2025-2026_d99216ee"
+        },
+        {
+            "type": "java",
+            "name": "Boolean",
+            "request": "launch",
+            "mainClass": "Boolean",
+            "projectName": "Algoritma-Pemrograman-2025-2026_d99216ee"
+        },
+        {
+            "type": "java",
+            "name": "tugas_1",
+            "request": "launch",
+            "mainClass": "tugas_1",
+            "projectName": "Algoritma-Pemrograman-2025-2026_d99216ee"
+        },
+        {
+            "type": "java",
+            "name": "angka",
+            "request": "launch",
+            "mainClass": "pertemuan7.angka",
+            "projectName": "Algoritma-Pemrograman-2025-2026_d99216ee"
+        },
+        {
+            "type": "java",
+            "name": "Lokal",
+            "request": "launch",
+            "mainClass": "Lokal",
+            "projectName": "Algoritma-Pemrograman-2025-2026_d99216ee"
+        },
+        {
+            "type": "java",
+            "name": "Main",
+            "request": "launch",
+            "mainClass": "pertemuan7.Main",
+            "projectName": "Algoritma-Pemrograman-2025-2026_d99216ee"
+        },
+        {
             "name": "C++ Launch (MinGW)",
             "type": "cppdbg",
             "request": "launch",
