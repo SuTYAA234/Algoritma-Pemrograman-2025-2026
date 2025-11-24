@@ -3,6 +3,20 @@
     "configurations": [
         {
             "type": "java",
+            "name": "latihanprogramkasir",
+            "request": "launch",
+            "mainClass": "pertemuan9.latihanprogramkasir",
+            "projectName": "Algoritma-Pemrograman-2025-2026_1c599cca"
+        },
+        {
+            "type": "java",
+            "name": "coba1",
+            "request": "launch",
+            "mainClass": "coba1",
+            "projectName": "Algoritma-Pemrograman-2025-2026_1c599cca"
+        },
+        {
+            "type": "java",
             "name": "angka",
             "request": "launch",
             "mainClass": "pertemuan7.angka",
