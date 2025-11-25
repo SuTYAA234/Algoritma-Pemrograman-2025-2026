@@ -3,6 +3,7 @@
     "configurations": [
         {
             "type": "java",
+<<<<<<< HEAD
             "name": "IntegerExample",
             "request": "launch",
             "mainClass": "IntegerExample",
@@ -49,12 +50,26 @@
             "request": "launch",
             "mainClass": "tugas_1",
             "projectName": "Algoritma-Pemrograman-2025-2026_d99216ee"
+=======
+            "name": "latihanprogramkasir",
+            "request": "launch",
+            "mainClass": "pertemuan9.latihanprogramkasir",
+            "projectName": "Algoritma-Pemrograman-2025-2026_1c599cca"
+        },
+        {
+            "type": "java",
+            "name": "coba1",
+            "request": "launch",
+            "mainClass": "coba1",
+            "projectName": "Algoritma-Pemrograman-2025-2026_1c599cca"
+>>>>>>> 0af8b24c4a8a68ff0e5158e422627688d80f267f
         },
         {
             "type": "java",
             "name": "angka",
             "request": "launch",
             "mainClass": "pertemuan7.angka",
+<<<<<<< HEAD
             "projectName": "Algoritma-Pemrograman-2025-2026_d99216ee"
         },
         {
@@ -70,6 +85,9 @@
             "request": "launch",
             "mainClass": "pertemuan7.Main",
             "projectName": "Algoritma-Pemrograman-2025-2026_d99216ee"
+=======
+            "projectName": "Algoritma-Pemrograman-2025-2026_1c599cca"
+>>>>>>> 0af8b24c4a8a68ff0e5158e422627688d80f267f
         },
         {
             "name": "C++ Launch (MinGW)",
