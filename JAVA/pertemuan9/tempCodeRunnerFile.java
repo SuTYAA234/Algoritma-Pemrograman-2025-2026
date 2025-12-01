@@ -1,0 +1,2 @@
+
+        String nama = sc.nextLine();
