@@ -25,10 +25,13 @@ $pilihan = (int)readline
 5. keluar
 Pilih menu (1-5):\n");
 
+echo "\n=====HASIL TRANSAKSI=====\n";
+echo "\nHalo,";
+echo "\n$nama\n";
 
 switch ($pilihan) {
     case 1:
-        $input_nim = readline("Masukkan NIM Anda: ");
+        $input_nim =readline("Masukkan NIM Anda: ");
         if ($input_nim === $nim) {
             echo "Saldo Anda: Rp. " . number_format($saldo, 0, ',', '.') . "\n";
            
@@ -53,20 +56,21 @@ switch ($pilihan) {
         echo "Saldo Anda sekarang: Rp. " . number_format($saldo, 0, ',', '.') . "\n";
         break;
     case 4:
-        $tranfer = (int)readline("Masukkan jumlah setor tunai: Rp. ");
+        $tranfer = (int)readline("Masukkan jumlah tranfer: Rp. ");
         $saldo -= $tranfer;
         echo "Tranfer sebesar Rp. " . number_format($tranfer, 0, ',', '.') . " berhasil.\n";
         echo "Saldo Anda sekarang: Rp. " . number_format($saldo, 0, ',', '.') . "\n";
+        break;
+    case 5:
+        echo "Keluar dari menu. Sampai jumpa lagi!\n";
         break;
     default:
         echo "Pilihan tidak valid. Silakan pilih menu antara 1-5.\n";
         break;
     }
 
-echo "\n=====STRUK TRANSAKSI=====\n";
-echo "\nHalo,";
-echo "\n$nama";
-echo "\nSisa saldo di rekening Anda Rp. " . number_format($saldo, 0, ',', '.') . " .\n";
-echo "Terima kasih telah menggunakan layanan kami!\n";
+
+
+echo "\nTerima kasih telah menggunakan layanan kami!\n";
 echo "\n=========================\n";
 ?>
