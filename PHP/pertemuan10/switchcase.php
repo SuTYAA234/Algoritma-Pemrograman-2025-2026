@@ -1,32 +1,37 @@
 <?php
 $nama = "Muhammad Rivan Surya";
-$input_nama = readline("Masukan Nama Anda: ");
+$nim = "2510393";
+$saldo = 2510393;
+$gagal ="Nim tidak sesuai!"; 
+$valid = false;
 
-if ($input_nama === $nama) {
-    echo "Nama Sesuai: $input_nama\n";
-    echo "=== Lanjut ke opsi selanjutnya ===\n";
-    
-} else {
-    echo "Nama Tidak Sesuai!\n";
-    exit(); 
+while (!$valid) {
+    $input = readline("Masukkan Nama: ");
+
+    if ($input === $nama) {
+     
+        $valid = true; 
+    } else {
+        echo "FALSE: Nama salah, coba lagi!\n";
+    }
 }
 
-$pilihan = (int)readline("Menu\n1. Cek Saldo
+$pilihan = (int)readline
+("=====Menu=====
+1. Cek Saldo
 2. Tarik Tunai
 3. Setor Tunai
 4. Tranfer
 5. keluar
-Pilih menu (1-5):");
+Pilih menu (1-5):\n");
 
-$nim = "2510393";
-$saldo = 2510393;
-$gagal ="nim tidak valid";
 
 switch ($pilihan) {
     case 1:
         $input_nim = readline("Masukkan NIM Anda: ");
         if ($input_nim === $nim) {
             echo "Saldo Anda: Rp. " . number_format($saldo, 0, ',', '.') . "\n";
+           
         } else {
             echo $gagal . "\n";
         }
@@ -56,5 +61,12 @@ switch ($pilihan) {
     default:
         echo "Pilihan tidak valid. Silakan pilih menu antara 1-5.\n";
         break;
-}
+    }
+
+echo "\n=====STRUK TRANSAKSI=====\n";
+echo "\nHalo,";
+echo "\n$nama";
+echo "\nSisa saldo di rekening Anda Rp. " . number_format($saldo, 0, ',', '.') . " .\n";
+echo "Terima kasih telah menggunakan layanan kami!\n";
+echo "\n=========================\n";
 ?>
