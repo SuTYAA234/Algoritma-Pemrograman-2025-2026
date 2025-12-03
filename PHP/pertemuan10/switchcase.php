@@ -1,20 +1,22 @@
 <?php
-$nama = "Muhammad Rivan Surya";
-$nim = "2510393";
-$saldo = 2510393;
-$gagal ="Nim tidak sesuai!"; 
-$valid = false;
+while(true){
+    $nama=readline("Masukan nama Anda: ");
+    $benar = strtolower(readline("Apakah nama sudah benar? (Y/N): "));
 
-while (!$valid) {
-    $input = readline("Masukkan Nama: ");
+    if($benar === 'y'){
+        break;
 
-    if ($input === $nama) {
-     
-        $valid = true; 
-    } else {
-        echo "FALSE: Nama salah, coba lagi!\n";
+    }else{
+        echo "Nama salah. Silakan masukkan nama lagi.\n";
     }
 }
+
+$nim=(int)readline("Masukan NIM Anda Untuk mengecek saldo:");
+
+$saldo=$nim;
+
+echo "Halo, $nama!\n";
+echo "Saldo Anda adalah: Rp " . number_format($saldo, 0, ',', '.') . "\n";
 
 $pilihan = (int)readline
 ("=====Menu=====
@@ -25,22 +27,13 @@ $pilihan = (int)readline
 5. keluar
 Pilih menu (1-5):\n");
 
-echo "\n=====HASIL TRANSAKSI=====\n";
-echo "\nHalo,";
-echo "\n$nama\n";
-
 switch ($pilihan) {
     case 1:
-        $input_nim =readline("Masukkan NIM Anda: ");
-        if ($input_nim === $nim) {
-            echo "Saldo Anda: Rp. " . number_format($saldo, 0, ',', '.') . "\n";
-           
-        } else {
-            echo $gagal . "\n";
-        }
+        echo $nama . ",\n";
+        echo "Saldo Anda adalah: Rp. " . number_format($saldo, 0, ',', '.') . "\n";
         break;
     case 2:
-        $tarik = (int)readline("Masukkan jumlah tarik tunai: Rp. ");
+       $tarik = (int)readline("Masukkan jumlah tarik tunai: Rp. ");
         if ($tarik > $saldo) {
             echo "Saldo tidak mencukupi untuk tarik tunai sebesar Rp. " . number_format($tarik, 0, ',', '.') . "\n";
         } else {
@@ -62,15 +55,15 @@ switch ($pilihan) {
         echo "Saldo Anda sekarang: Rp. " . number_format($saldo, 0, ',', '.') . "\n";
         break;
     case 5:
-        echo "Keluar dari menu. Sampai jumpa lagi!\n";
+         echo "Keluar dari menu. Sampai jumpa lagi!\n";
         break;
     default:
         echo "Pilihan tidak valid. Silakan pilih menu antara 1-5.\n";
         break;
-    }
+}
 
 
 
 echo "\nTerima kasih telah menggunakan layanan kami!\n";
-echo "\n=========================\n";
+echo"==============";
 ?>

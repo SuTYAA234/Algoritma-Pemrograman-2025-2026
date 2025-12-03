@@ -3,68 +3,80 @@
 import java.util.Scanner;
 
 public class switchcase {
-    public static void main(String[] args) {
+     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
 
-        boolean valid = false;
-        String nama = "muhammad rivan surya";
 
-       
-        while (!valid) {
-            System.out.print("Masukkan nama: ");
-            String input = sc.nextLine();
+        String nama;
+        while (true) {
+            System.out.print("Masukkan nama Anda: ");
+            nama = sc.nextLine();
 
-            if (input.equals(nama)) {
-                System.out.println("Nama sesuai!");
-                valid = true;
+            System.out.print("Apakah nama sudah benar? (Y/N): ");
+            String benar = sc.nextLine().toLowerCase();
+
+            if (benar.equals("y")) {
+                break;
             } else {
-                System.out.println("Nama salah, coba lagi!");
+                System.out.println("Nama salah. Silakan masukkan nama lagi.\n");
             }
         }
 
-        int asli = 2510393;
-        double saldo = 2510393;
+        System.out.print("Masukkan NIM Anda Untuk mengecek saldo: ");
+        int nim = sc.nextInt();
+        double saldo = nim;
 
-        String menu = """
-                ====== MENU ======
-                1. Cek saldo
-                2. Transfer
-                3. Tarik tunai
-                4. Setor tunai
+        System.out.println("\nHalo, " + nama + "!");
+        System.out.println("Saldo Anda adalah: Rp " + saldo);
+
+        // Menu
+        System.out.println("""
+                ===== Menu =====
+                1. Cek Saldo
+                2. Tarik Tunai
+                3. Setor Tunai
+                4. Transfer
                 5. Keluar
-                """;
+                """);
 
-        System.out.println(menu);
+        System.out.print("Pilih menu (1-5): ");
+        int pilihan = sc.nextInt();
 
-        System.out.println("=============HASIL TRANSAKSI==============");
-        System.out.println("Halo " + nama);
-        System.out.print("Masukkan pilihan menu: ");
-        int pilihanUser = sc.nextInt();
-
-
-        switch (pilihanUser) {
-
+        switch (pilihan) {
             case 1:
-                System.out.print("Masukan NIM anda: ");
-                String nim = sc.next();
-
-                if (nim.equals(String.valueOf(asli))) {
-                    System.out.println("Sisa saldo di rekening Anda Rp." + saldo);
-                } else {
-                    System.out.println("NIM salah! Tidak dapat menampilkan saldo.");
-                }
+                System.out.println(nama + ",");
+                System.out.println("Saldo Anda adalah: Rp " + saldo);
                 break;
 
             case 2:
-                System.out.println("Fitur sedang dalam pengembangan");
+                System.out.print("Masukkan jumlah tarik tunai: Rp ");
+                int tarik = sc.nextInt();
+
+                if (tarik > saldo) {
+                    System.out.println("Saldo tidak mencukupi untuk tarik tunai sebesar Rp " + tarik);
+                } else {
+                    saldo -= tarik;
+                    System.out.println("Tarik tunai sebesar Rp " + tarik + " berhasil.");
+                    System.out.println("Sisa saldo Anda: Rp " + saldo);
+                }
                 break;
 
             case 3:
-                System.out.println("Fitur sedang dalam pengembangan");
+                System.out.print("Masukkan jumlah setor tunai: Rp ");
+                int setor = sc.nextInt();
+
+                saldo += setor;
+                System.out.println("Setor tunai sebesar Rp " + setor + " berhasil.");
+                System.out.println("Saldo Anda sekarang: Rp " + saldo);
                 break;
 
             case 4:
-                System.out.println("Fitur sedang dalam pengembangan");
+                System.out.print("Masukkan jumlah transfer: Rp ");
+                int transfer = sc.nextInt();
+
+                saldo -= transfer;
+                System.out.println("Transfer sebesar Rp " + transfer + " berhasil.");
+                System.out.println("Saldo Anda sekarang: Rp " + saldo);
                 break;
 
             case 5:
@@ -72,13 +84,12 @@ public class switchcase {
                 break;
 
             default:
-                System.out.println("Pilihan tidak ada, silakan pilih antara 1-5");
+                System.out.println("Pilihan tidak valid. Silakan pilih menu antara 1-5.");
                 break;
         }
 
-
-        System.out.println("\nTerimakasih telah menggunakan layanan kami.");
-        System.out.println("==========================================");
-
+        System.out.println("\nTerima kasih telah menggunakan layanan kami!");
+        System.out.println("==============");
+ 
     }
 }

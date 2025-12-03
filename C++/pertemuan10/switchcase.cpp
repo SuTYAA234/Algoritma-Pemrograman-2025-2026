@@ -5,78 +5,98 @@
 using namespace std;
 
 int main() {
-    string nama = "muhammad rivan surya";
-    string input;
+    string nama;
+    char benar;
 
-    bool valid = false;
+    
+    do {
+        cout << "Masukkan nama Anda: ";
+        getline(cin, nama);
 
-    while (!valid) {
-        cout << "Masukkan nama: ";
-        getline(cin, input);
+        cout << "Apakah nama sudah benar? (Y/N): ";
+        cin >> benar;
+        benar = tolower(benar);
 
-        if (input == nama) {
-            cout << "Nama sesuai!\n";
-            valid = true;
-        } else {
-            cout << "Nama salah, coba lagi!\n";
+        cin.ignore(); 
+        if (benar != 'y') {
+            cout << "Nama salah. Silakan masukkan nama lagi.\n\n";
         }
-    }
 
-    int asli = 2510393;
-    double saldo = 2510393;
+    } while (benar != 'y');
 
-    cout << "====== MENU ======\n";
-    cout << "1. Cek saldo\n";
-    cout << "2. Transfer\n";
-    cout << "3. Tarik tunai\n";
-    cout << "4. Setor tunai\n";
-    cout << "5. Keluar\n";
+    int nim;
+    cout << "Masukkan NIM Anda Untuk mengecek saldo: ";
+    cin >> nim;
+    double saldo = nim;
 
-    cout << "\n=============HASIL TRANSAKSI==============\n";
-    cout << "Halo " << nama << endl;
+    cout << "\nHalo, " << nama << "!\n";
+    cout << "Saldo Anda adalah: Rp " << saldo << endl;
 
+    cout << "\n===== Menu =====\n"
+         << "1. Cek Saldo\n"
+         << "2. Tarik Tunai\n"
+         << "3. Setor Tunai\n"
+         << "4. Transfer\n"
+         << "5. Keluar\n\n";
+
+    cout << "Pilih menu (1-5): ";
     int pilihan;
-    cout << "Masukkan pilihan menu: ";
     cin >> pilihan;
 
     switch (pilihan) {
-    case 1: {
-        cout << "Masukkan NIM anda: ";
-        string nim;
-        cin >> nim;
+        case 1:
+            cout << nama << ",\n";
+            cout << "Saldo Anda adalah: Rp " << saldo << endl;
+            break;
 
-        if (nim == to_string(asli)) {
-            cout << "Sisa saldo di rekening Anda Rp. "
-                 << fixed << setprecision(0) << saldo << endl; // <-- tidak scientific
-        } else {
-            cout << "NIM salah! Tidak dapat menampilkan saldo.\n";
+        case 2: {
+            int tarik;
+            cout << "Masukkan jumlah tarik tunai: Rp ";
+            cin >> tarik;
+
+            if (tarik > saldo) {
+                cout << "Saldo tidak mencukupi untuk tarik tunai sebesar Rp " << tarik << endl;
+            } else {
+                saldo -= tarik;
+                cout << "Tarik tunai sebesar Rp " << tarik << " berhasil.\n";
+                cout << "Sisa saldo Anda: Rp " << saldo << endl;
+            }
+            break;
         }
-        break;
+
+        case 3: {
+            int setor;
+            cout << "Masukkan jumlah setor tunai: Rp ";
+            cin >> setor;
+
+            saldo += setor;
+            cout << "Setor tunai sebesar Rp " << setor << " berhasil.\n";
+            cout << "Saldo Anda sekarang: Rp " << saldo << endl;
+            break;
+        }
+
+        case 4: {
+            int transfer;
+            cout << "Masukkan jumlah transfer: Rp ";
+            cin >> transfer;
+
+            saldo -= transfer;
+            cout << "Transfer sebesar Rp " << transfer << " berhasil.\n";
+            cout << "Saldo Anda sekarang: Rp " << saldo << endl;
+            break;
+        }
+
+        case 5:
+            cout << "Keluar dari menu. Sampai jumpa lagi!\n";
+            break;
+
+        default:
+            cout << "Pilihan tidak valid. Silakan pilih menu antara 1-5.\n";
+            break;
     }
 
-    case 2:
-        cout << "Fitur sedang dalam pengembangan\n";
-        break;
-
-    case 3:
-        cout << "Fitur sedang dalam pengembangan\n";
-        break;
-
-    case 4:
-        cout << "Fitur sedang dalam pengembangan\n";
-        break;
-
-    case 5:
-        cout << "Keluar dari menu. Sampai jumpa lagi!\n";
-        break;
-
-    default:
-        cout << "Pilihan tidak ada, silakan pilih antara 1-5\n";
-        break;
-    }
-
-    cout << "\nTerimakasih telah menggunakan layanan kami.\n";
-    cout << "==========================================\n";
+    cout << "\nTerima kasih telah menggunakan layanan kami!\n";
+    cout << "==============\n";
 
     return 0;
 }
